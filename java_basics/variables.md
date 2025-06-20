@@ -94,3 +94,52 @@ System.out.println(isJavaFun);  // Output: true
 ---
 
 > ✨ Java is strictly typed – always declare a variable’s type before using it.
+
+
+# 📘 Declaring Multiple Variables in Java
+
+In Java, you can declare and assign multiple variables of the same type in a compact way using a **comma-separated list** or by assigning **one value to multiple variables**.
+
+---
+
+## 🔗 Declaring Multiple Variables of the Same Type
+
+Instead of declaring variables one by one:
+```java
+int x = 5;
+int y = 6;
+int z = 50;
+System.out.println(x + y + z);  // Output: 61
+```
+
+You can do it in a single line:
+```java
+int x = 5, y = 6, z = 50;
+System.out.println(x + y + z);  // Output: 61
+```
+
+---
+
+## ➕ Assigning One Value to Multiple Variables
+
+You can assign the **same value** to multiple variables using chained assignment:
+```java
+int x, y, z;
+x = y = z = 50;
+System.out.println(x + y + z);  // Output: 150
+```
+
+> 💡 Useful for initializing multiple variables to a default value.
+
+---
+
+## 📌 Summary
+
+| Pattern                  | Description                             |
+|--------------------------|-----------------------------------------|
+| `int x = 1, y = 2;`      | Declare and assign in one line          |
+| `x = y = z = 50;`        | Assign same value to multiple variables |
+
+---
+
+> ✅ These shortcuts make your code cleaner and easier to read, especially when working with many variables of the same type.
