@@ -28,9 +28,7 @@ int sum1 = 100 + 50; // 150
 int sum2 = sum1 + 250; // 400
 int sum3 = sum2 + sum2; // 800
 
-text
 
----
 
 ## 2. Assignment Operators
 
@@ -49,9 +47,7 @@ These are used to put values into variables, or change them.
 int x = 10;
 x += 5; // x is now 15
 
-text
 
----
 
 ## 3. Comparison Operators
 
@@ -71,9 +67,7 @@ int x = 5;
 int y = 3;
 System.out.println(x > y); // true, because 5 is more than 3
 
-text
 
----
 
 ## 4. Logical Operators
 
@@ -91,9 +85,7 @@ System.out.println(x < 5 && x < 10); // true
 System.out.println(x < 5 || x < 4); // true
 System.out.println(!(x < 5 && x < 10)); // false
 
-text
 
----
 
 ## Summary
 
