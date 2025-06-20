@@ -1,4 +1,4 @@
-public class PrintingStatements {
+public class printingstatements {
 
     // This is the main method where the program starts execution
 public static void main(String[] args) {
