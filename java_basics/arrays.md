@@ -156,9 +156,4 @@ This prints all values in the matrix row by row.
 - Use loops to access or change all elements.
 - Multidimensional arrays are useful for tables or grids.
 
----
-
-**How to use this file:**  
-Copy all the text above, paste it into a text editor, and save it as arrays.md.  
-This file gives you clear definitions, new examples, and explanations for Java arrays.
 
