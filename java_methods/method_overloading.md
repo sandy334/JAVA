@@ -111,3 +111,21 @@ Good evening, Sara!
 - The return type can be different, but Java decides which method to use based on the parameters, not the return type.
 - Method overloading makes your code cleaner and more flexible.
 
+The use of "plus" in the context of Java method overloading typically refers to methods designed to perform addition, often named as "plusMethod" or similar. These methods demonstrate how you can have multiple methods with the same name but different parameter types or counts, allowing you to add integers, doubles, or other types using the same method name. For example:
+
+```java
+static int plusMethod(int x, int y) {
+    return x + y;
+}
+
+static double plusMethod(double x, double y) {
+    return x + y;
+}
+```
+
+Here, `plusMethod` is overloaded: one version adds two integers, and the other adds two doubles. When you call `plusMethod(8, 5)`, the integer version is used, and when you call `plusMethod(4.3, 6.26)`, the double version is used
+
+The "plus" in the method name is just a naming choice to indicate the method's purpose (addition). The actual addition is performed by the `+` operator within the method body. Java does not allow user-defined operator overloading (except for the built-in overloading of `+` for both numbers and string concatenation), so method overloading is the standard way to achieve similar functionality for different data types.
+
+In summary, "plus" is used in method names to show addition operations, and method overloading allows you to define several "plus" methods to add different types or numbers of values
+
