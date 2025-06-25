@@ -442,8 +442,6 @@ public class RemoveElement {
 Use a map to count word frequencies, then find the word with the highest count.
 
 
-Great! Here are **questions 36 to 40** in a fully copyable format:
-
 ## 36. Insert Element in Array
 
 **Problem:**  
