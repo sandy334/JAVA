@@ -94,4 +94,5 @@ rob2 = max;
 * You only need two variables to keep track of previous maximums.
 * Elegant, efficient solution using bottom-up dynamic programming.
 * No extra array needed.
+it is so simple
 
