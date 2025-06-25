@@ -114,6 +114,122 @@ public class OneToTen {
 ```
 **Explanation:**  
 A prime number has no divisors other than 1 and itself.
+## 7. Calculate Factorial
+
+**Problem:**  
+Calculate the factorial of a number.
+
+**Solution:**
+```java
+public class Factorial {
+    public static void main(String[] args) {
+        int n = 5, fact = 1;
+        for (int i = 1; i <= n; i++)
+            fact *= i;
+        System.out.println("Factorial: " + fact);
+    }
+}
+```
+
+**Explanation:**  
+Multiply all numbers from 1 to n to get the factorial.
+
+---
+
+## 8. Reverse a String
+
+**Problem:**  
+Reverse a given string.
+
+**Solution:**
+```java
+public class ReverseString {
+    public static void main(String[] args) {
+        String str = "hello";
+        String rev = new StringBuilder(str).reverse().toString();
+        System.out.println("Reversed: " + rev);
+    }
+}
+```
+
+**Explanation:**  
+`StringBuilder` has a built-in `reverse()` method for strings.
+
+---
+
+## 9. Check Palindrome String
+
+**Problem:**  
+Check if a string is a palindrome.
+
+**Solution:**
+```java
+public class Palindrome {
+    public static void main(String[] args) {
+        String str = "madam";
+        String rev = new StringBuilder(str).reverse().toString();
+        if (str.equals(rev))
+            System.out.println("Palindrome");
+        else
+            System.out.println("Not Palindrome");
+    }
+}
+```
+
+**Explanation:**  
+A palindrome reads the same forward and backward.
+
+---
+
+## 10. Fibonacci Series up to n Terms
+
+**Problem:**  
+Print the first `n` Fibonacci numbers.
+
+**Solution:**
+```java
+public class Fibonacci {
+    public static void main(String[] args) {
+        int n = 10, a = 0, b = 1;
+        for (int i = 0; i < n; i++) {
+            System.out.print(a + " ");
+            int sum = a + b;
+            a = b;
+            b = sum;
+        }
+    }
+}
+```
+
+**Explanation:**  
+Each number is the sum of the previous two.
+
+---
+
+## 11. Find Prime Number
+
+**Problem:**  
+Check if a number is prime.
+
+**Solution:**
+```java
+public class PrimeCheck {
+    public static void main(String[] args) {
+        int num = 7, count = 0;
+        for (int i = 2; i <= num / 2; i++)
+            if (num % i == 0) count++;
+        if (count == 0 && num > 1)
+            System.out.println("Prime");
+        else
+            System.out.println("Not Prime");
+    }
+}
+```
+
+**Explanation:**  
+A prime number has no divisors other than 1 and itself.
+
+---
 
 ## 12. Sum of Array Elements
 
@@ -266,6 +382,153 @@ public class SmallestArray {
 ```
 **Explanation:**  
 Check each number in the range for primality.
+
+## 20. Count Even and Odd in Array
+**Problem:** Count the number of even and odd numbers in an array.
+
+**Solution:**
+```java
+public class EvenOddCount {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        int even = 0, odd = 0;
+        for (int num : arr) {
+            if (num % 2 == 0) even++;
+            else odd++;
+        }
+        System.out.println("Even: " + even + ", Odd: " + odd);
+    }
+}
+```
+**Explanation:** Use modulus to separate even and odd numbers.
+
+---
+
+## 21. Check Armstrong Number
+**Problem:** Check if a number is an Armstrong number (sum of cubes of its digits equals the number).
+
+**Solution:**
+```java
+public class Armstrong {
+    public static void main(String[] args) {
+        int num = 153, sum = 0, temp = num;
+        while (temp != 0) {
+            int digit = temp % 10;
+            sum += digit * digit * digit;
+            temp /= 10;
+        }
+        if (num == sum)
+            System.out.println("Armstrong");
+        else
+            System.out.println("Not Armstrong");
+    }
+}
+```
+**Explanation:** Extract each digit, cube it, and sum; compare with original.
+
+---
+
+## 22. Reverse an Integer
+**Problem:** Reverse the digits of an integer.
+
+**Solution:**
+```java
+public class ReverseInteger {
+    public static void main(String[] args) {
+        int num = 1234, rev = 0;
+        while (num != 0) {
+            rev = rev * 10 + num % 10;
+            num /= 10;
+        }
+        System.out.println("Reversed: " + rev);
+    }
+}
+```
+**Explanation:** Extract digits and build the reversed number.
+
+---
+
+## 23. Find GCD of Two Numbers
+**Problem:** Find the greatest common divisor (GCD) of two numbers.
+
+**Solution:**
+```java
+public class GCD {
+    public static void main(String[] args) {
+        int a = 54, b = 24;
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        System.out.println("GCD: " + a);
+    }
+}
+```
+**Explanation:** Uses the Euclidean algorithm for GCD.
+
+---
+
+## 24. Find LCM of Two Numbers
+**Problem:** Find the least common multiple (LCM) of two numbers.
+
+**Solution:**
+```java
+public class LCM {
+    public static void main(String[] args) {
+        int a = 12, b = 18;
+        int lcm = (a * b) / gcd(a, b);
+        System.out.println("LCM: " + lcm);
+    }
+    static int gcd(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+}
+```
+**Explanation:** LCM is calculated using the formula (a * b) / GCD(a, b).
+
+---
+
+## 25. Print Multiplication Table
+**Problem:** Print the multiplication table of a number.
+
+**Solution:**
+```java
+public class MultiplicationTable {
+    public static void main(String[] args) {
+        int n = 5;
+        for (int i = 1; i <= 10; i++)
+            System.out.println(n + " x " + i + " = " + (n * i));
+    }
+}
+```
+**Explanation:** Use a loop to multiply n by numbers 1 to 10.
+
+---
+
+## 26. Print All Prime Numbers in Range
+**Problem:** Print all prime numbers between two numbers.
+
+**Solution:**
+```java
+public class PrimesInRange {
+    public static void main(String[] args) {
+        int start = 10, end = 20;
+        for (int i = start; i <= end; i++) {
+            boolean isPrime = true;
+            for (int j = 2; j <= i / 2; j++)
+                if (i % j == 0) { isPrime = false; break; }
+            if (isPrime && i > 1) System.out.print(i + " ");
+        }
+    }
+}
+```
+**Explanation:** Check each number in the range for primality.
 
 ## 27. Find Duplicate Elements in Array
 
