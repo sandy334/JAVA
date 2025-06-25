@@ -1,3 +1,5 @@
+Certainly! Below is a Markdown (.md) file containing 50 basic Java problems, each with a full explanation and code solution. You can copy and save this as a `.md` file for easy reading and reference.
+
 # 50 Basic Java Problems with Full Explanations
 
 ## 1. Print "Hello, World!"
@@ -438,3 +440,301 @@ public class RemoveElement {
 ```
 **Explanation:**  
 Use a map to count word frequencies, then find the word with the highest count.
+
+
+Great! Here are **questions 36 to 40** in a fully copyable format:
+
+## 36. Insert Element in Array
+
+**Problem:**  
+Insert an element at a specific position in an array.
+
+**Solution:**
+```java
+import java.util.*;
+public class InsertElement {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 4, 5};
+        int insertIndex = 2, element = 3;
+        int[] newArr = new int[arr.length + 1];
+        for (int i = 0, k = 0; i < newArr.length; i++) {
+            if (i == insertIndex) newArr[i] = element;
+            else newArr[i] = arr[k++];
+        }
+        System.out.println(Arrays.toString(newArr));
+    }
+}
+```
+**Explanation:**  
+We create a new array with one extra slot. As we copy elements, we insert the new element at the specified index and shift the rest.
+
+## 37. Find Length of String
+
+**Problem:**  
+Find the length of a string.
+
+**Solution:**
+```java
+public class StringLength {
+    public static void main(String[] args) {
+        String str = "hello";
+        System.out.println("Length: " + str.length());
+    }
+}
+```
+**Explanation:**  
+The `length()` method returns the number of characters in the string.
+
+## 38. Convert String to Uppercase
+
+**Problem:**  
+Convert a string to uppercase.
+
+**Solution:**
+```java
+public class Uppercase {
+    public static void main(String[] args) {
+        String str = "hello";
+        System.out.println(str.toUpperCase());
+    }
+}
+```
+**Explanation:**  
+The `toUpperCase()` method converts all characters in the string to uppercase.
+
+## 39. Convert String to Lowercase
+
+**Problem:**  
+Convert a string to lowercase.
+
+**Solution:**
+```java
+public class Lowercase {
+    public static void main(String[] args) {
+        String str = "HELLO";
+        System.out.println(str.toLowerCase());
+    }
+}
+```
+**Explanation:**  
+The `toLowerCase()` method converts all characters in the string to lowercase.
+
+## 40. Concatenate Two Strings
+
+**Problem:**  
+Concatenate two strings.
+
+**Solution:**
+```java
+public class Concatenate {
+    public static void main(String[] args) {
+        String a = "Hello", b = "World";
+        System.out.println(a + " " + b);
+    }
+}
+```
+**Explanation:**  
+The `+` operator joins two strings together with a space in between.
+
+
+## 41. Replace Character in String
+
+**Problem:**  
+Replace all occurrences of a character in a string.
+
+**Solution:**
+```java
+public class ReplaceChar {
+    public static void main(String[] args) {
+        String str = "hello";
+        System.out.println(str.replace('l', 'p'));
+    }
+}
+```
+**Explanation:**  
+The `replace()` method replaces all occurrences of the specified character with another.
+
+## 42. Split String into Array
+
+**Problem:**  
+Split a string into an array of words.
+
+**Solution:**
+```java
+import java.util.*;
+public class SplitString {
+    public static void main(String[] args) {
+        String str = "Java is fun";
+        String[] words = str.split(" ");
+        System.out.println(Arrays.toString(words));
+    }
+}
+```
+**Explanation:**  
+The `split(" ")` method splits the string at each space, creating an array of words.
+
+## 43. Check if String Contains Substring
+
+**Problem:**  
+Check if a string contains a specific substring.
+
+**Solution:**
+```java
+public class ContainsSubstring {
+    public static void main(String[] args) {
+        String str = "hello world";
+        System.out.println(str.contains("world"));
+    }
+}
+```
+**Explanation:**  
+The `contains()` method checks if the substring exists in the string.
+
+## 44. Find Index of Character in String
+
+**Problem:**  
+Find the index of a character in a string.
+
+**Solution:**
+```java
+public class IndexOfChar {
+    public static void main(String[] args) {
+        String str = "hello";
+        System.out.println(str.indexOf('e'));
+    }
+}
+```
+**Explanation:**  
+The `indexOf()` method returns the position of the first occurrence of the character.
+
+## 45. Convert Integer to String
+
+**Problem:**  
+Convert an integer to a string.
+
+**Solution:**
+```java
+public class IntToString {
+    public static void main(String[] args) {
+        int num = 123;
+        String str = Integer.toString(num);
+        System.out.println(str);
+    }
+}
+```
+**Explanation:**  
+`Integer.toString()` converts an integer to its string representation.
+
+
+## 46. Convert String to Integer
+
+**Problem:**  
+Convert a string to an integer.
+
+**Solution:**
+```java
+public class StringToInt {
+    public static void main(String[] args) {
+        String str = "123";
+        int num = Integer.parseInt(str);
+        System.out.println(num);
+    }
+}
+```
+**Explanation:**  
+`Integer.parseInt()` parses the string and returns the integer value.
+
+## 47. Reverse a Linked List (Iterative)
+
+**Problem:**  
+Reverse a singly linked list.
+
+**Solution:**
+```java
+class Node {
+    int data;
+    Node next;
+    Node(int d) { data = d; }
+}
+public class ReverseLinkedList {
+    public static Node reverse(Node head) {
+        Node prev = null, current = head, next = null;
+        while (current != null) {
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+        return prev;
+    }
+}
+```
+**Explanation:**  
+We use three pointers to reverse the links between nodes, making the previous node the next node at each step.
+
+## 48. Swap Two Strings Without Temp Variable
+
+**Problem:**  
+Swap two string variables without using a temporary variable.
+
+**Solution:**
+```java
+public class SwapStrings {
+    public static void main(String[] args) {
+        String a = "hello", b = "world";
+        a = a + b;
+        b = a.substring(0, a.length() - b.length());
+        a = a.substring(b.length());
+        System.out.println("a=" + a + ", b=" + b);
+    }
+}
+```
+**Explanation:**  
+Concatenate both strings, then use substring to extract the original values in swapped order.
+
+## 49. Remove Duplicates from String
+
+**Problem:**  
+Remove duplicate characters from a string.
+
+**Solution:**
+```java
+public class RemoveDuplicateChars {
+    public static void main(String[] args) {
+        String str = "programming";
+        StringBuilder sb = new StringBuilder();
+        for (char c : str.toCharArray())
+            if (sb.indexOf(String.valueOf(c)) == -1) sb.append(c);
+        System.out.println(sb.toString());
+    }
+}
+```
+**Explanation:**  
+We build a new string, adding each character only if it hasn't already been added.
+
+## 50. Find Most Repeated Word in Text
+
+**Problem:**  
+Find the most repeated word in a text.
+
+**Solution:**
+```java
+import java.util.*;
+public class MostRepeatedWord {
+    public static void main(String[] args) {
+        String text = "this is a test this is only a test";
+        String[] words = text.split("\\s+");
+        Map freq = new HashMap<>();
+        for (String word : words)
+            freq.put(word, freq.getOrDefault(word, 0) + 1);
+        String most = null;
+        int max = 0;
+        for (Map.Entry e : freq.entrySet())
+            if (e.getValue() > max) { max = e.getValue(); most = e.getKey(); }
+        System.out.println("Most repeated: " + most);
+    }
+}
+```
+**Explanation:**  
+We split the text into words, count each word's frequency using a map, and then find the word with the highest count.
+
