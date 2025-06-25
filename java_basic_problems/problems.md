@@ -1,4 +1,4 @@
-Certainly! Below is a Markdown (.md) file containing 50 basic Java problems, each with a full explanation and code solution. You can copy and save this as a `.md` file for easy reading and reference.
+
 
 # 50 Basic Java Problems with Full Explanations
 
