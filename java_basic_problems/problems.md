@@ -105,12 +105,12 @@ Print numbers from 1 to 10 using a loop.
 ```java
 public class OneToTen {
     public static void main(String[] args) {
-        for (int i = 1; i  1)
-            System.out.println("Prime");
-        else
-            System.out.println("Not Prime");
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(i);
+        }
     }
 }
+
 ```
 **Explanation:**  
 A prime number has no divisors other than 1 and itself.
@@ -121,14 +121,26 @@ Calculate the factorial of a number.
 
 **Solution:**
 ```java
+import java.util.Scanner;
+
 public class Factorial {
     public static void main(String[] args) {
-        int n = 5, fact = 1;
-        for (int i = 1; i <= n; i++)
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        long fact = 1; // Use long for larger factorials
+        for (int i = 1; i <= num; i++) {
             fact *= i;
-        System.out.println("Factorial: " + fact);
+        }
+
+        System.out.println("Factorial of " + num + " is " + fact);
+
+        sc.close();
     }
 }
+
 ```
 
 **Explanation:**  
