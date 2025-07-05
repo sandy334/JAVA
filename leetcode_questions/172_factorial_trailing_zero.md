@@ -58,9 +58,3 @@ class Solution {
 
 ---
 
-### 🏷️ Tags:
-
-- Math  
-- Counting  
-- Factorial  
-- Time Complexity: O(log₅ n)
