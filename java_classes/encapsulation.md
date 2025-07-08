@@ -127,3 +127,4 @@ public void setPassword(String password) {
 ```
 
 Encapsulation keeps your code secure, clean, and flexible! 🔐
+
