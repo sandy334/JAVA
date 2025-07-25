@@ -34,18 +34,17 @@ The most straightforward way to solve this problem is by using a **hash set** (o
 ## Java Solution
 
 ```java
-import java.util.HashSet;
-import java.util.Set;
-
 class Solution {
-    public boolean containsDuplicate(int[] nums) {
-        Set<Integer> seen = new HashSet<>(); // Create a hash set to store seen numbers
-        for (int num : nums) {               // Iterate through each number in the array
-            if (seen.contains(num)) {        // If the number is already in the set, it's a duplicate
-                return true;
+    public boolean containsNearbyDuplicate(int[] nums, int k) {
+        int n = nums.length;
+        HashSet<Integer> set = new HashSet<>();
+        for(int i=0;i<n;i++){
+            if(set.contains(nums[i])) return true;
+            set.add(nums[i]);
+            if(set.size()>k){
+                set.remove(nums[i-k]);
             }
-            seen.add(num);                   // Otherwise, add the number to the set
         }
-        return false;                        // If no duplicates were found after checking all numbers
+        return false;
     }
 }
